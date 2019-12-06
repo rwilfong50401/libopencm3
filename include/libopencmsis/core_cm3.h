@@ -151,7 +151,7 @@ static inline uint32_t SysTick_Config(uint32_t n_ticks)
 {
 	/* constant from systick_set_reload -- as this returns something that's
 	 * not void, this is the only possible error condition */
-	if (n_ticks & ~0x00FFFFFF) {
+	if (n_ticks & ~0x00FFFFFFU) {
 		return 1;
 	}
 
